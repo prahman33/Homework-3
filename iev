@@ -1,0 +1,13 @@
+couple = [18558 , 18294 , 18851 , 16685 , 18840  ,17678]
+ng = []
+for i in range(len(couple)):
+    if i < 3:
+       ng.append(couple[i] * 2)
+    elif i == 3:
+        ng.append(couple[i] * 3 / 4 * 2)
+    elif i == 4:
+        ng.append(couple[i] / 2 * 2)
+    else :
+        ng.append(0)
+
+print(sum(ng))
