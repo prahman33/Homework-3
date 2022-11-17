@@ -1,0 +1,19 @@
+from collections import Counter
+hgc = 0
+with open(r"C:\Users\pc\Downloads\rosalind_gc (4).txt") as s:
+    c = s.readlines()
+    for x, l in enumerate(c):
+        if l.startswith('>'):
+            id = l[1:]
+            sq = ''
+        else:
+            sq2=l.strip()
+            sq=sq+sq2
+            if x==(len(c)-1) or (c[x+1].startswith('>')):
+                sqc=Counter(sq)
+                gc=100*(sqc['G']+sqc['C'])/len(sq)
+                if gc > hgc:
+                    hgc = gc
+                    ID = id
+print(ID, end='')
+print(hgc)
